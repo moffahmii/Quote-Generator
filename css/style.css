@@ -1,0 +1,119 @@
+body {
+    font-family: "Acme", sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 650px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #ffb406;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+#quote i {
+    color: #ffb406;
+    margin: 0 5px;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+.quote-icon {
+    color: #ffb406;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    margin: 0 8px;
+}
+
+
+#quote {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #ffffff;
+    transition: opacity 0.5s ease;
+}
+
+#author {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffb406;
+    margin-bottom: 30px;
+    transition: opacity 0.5s ease;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #d23030;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: #ff4757;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.05) 50%,
+            rgba(255, 255, 255, 0.15) 100%);
+    filter: blur(6px);
+    animation: shine 6s ease-in-out infinite alternate;
+    pointer-events: none;
+
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-30%);
+    }
+
+    100% {
+        transform: translateX(30%);
+    }
+}
